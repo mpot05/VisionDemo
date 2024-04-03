@@ -10,9 +10,10 @@ import SwiftUI
 @main
 struct VisionDemoApp: App {
     var body: some Scene {
-        WindowGroup {
+        ImmersiveSpace {
             ContentView()
         }.windowStyle(.volumetric)
+            .immersionStyle(selection: .constant(.full), in: .full)
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
